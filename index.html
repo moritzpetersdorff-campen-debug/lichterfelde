@@ -146,6 +146,17 @@ section{padding:clamp(52px,7vw,92px) 0}
 }
 .note p{margin:0; max-width:60ch}
 
+/* Moeblierung */
+.furn{display:grid; gap:1px; background:var(--line); border:1px solid var(--line); border-radius:var(--r); overflow:hidden; margin-top:8px}
+@media (min-width:700px){ .furn{grid-template-columns:repeat(2,1fr)} }
+@media (min-width:1000px){ .furn{grid-template-columns:repeat(3,1fr)} }
+.furn section{background:var(--surface); padding:22px 24px; margin:0}
+.furn h3{font-family:"Public Sans",sans-serif; font-size:11.5px; font-weight:600; letter-spacing:.11em;
+  text-transform:uppercase; color:var(--accent); margin:0 0 12px}
+.furn ul{margin:0; padding:0; list-style:none; display:grid; gap:7px}
+.furn li{font-size:14.6px; color:var(--ink-2); display:flex; gap:9px; align-items:flex-start}
+.furn li::before{content:""; flex:none; width:4px; height:4px; margin-top:.66em; border-radius:50%; background:var(--line-2)}
+
 /* Preis */
 .price{margin-top:26px; padding-top:22px; border-top:1px solid var(--line-2)}
 .price-n{font-family:"Newsreader",Georgia,serif; font-size:2.5rem; line-height:1; letter-spacing:-.02em; font-variant-numeric:tabular-nums}
@@ -269,7 +280,7 @@ footer .fgrid{display:grid; gap:22px}
         <div class="hero-meta">
           <span class="chip hi"><span class="de">Befristet 4 bis 5 Monate</span><span class="en">Fixed term, 4 to 5 months</span></span>
           <span class="chip">143,95 m²</span>
-          <span class="chip"><span class="de">4 Zimmer</span><span class="en">4 rooms</span></span>
+          <span class="chip"><span class="de">4 Zimmer, 3 Betten</span><span class="en">4 rooms, 3 beds</span></span>
           <span class="chip"><span class="de">17,80 m² Terrasse nach Südwesten</span><span class="en">17.80 m² south-west terrace</span></span>
           <span class="chip"><span class="de">Anteil am Garten</span><span class="en">Share of the garden</span></span>
           <span class="chip"><span class="de">Denkmalensemble von 1911</span><span class="en">Listed ensemble, 1911</span></span>
@@ -296,7 +307,7 @@ footer .fgrid{display:grid; gap:22px}
   <div class="wrap">
     <dl class="facts">
       <div class="fact"><dt><span class="de">Wohnfläche</span><span class="en">Living area</span></dt><dd>143,95 m²<small><span class="de">Wohnräume, ohne Terrasse</span><span class="en">rooms only, terrace extra</span></small></dd></div>
-      <div class="fact"><dt><span class="de">Zimmer</span><span class="en">Rooms</span></dt><dd>4<small><span class="de">plus Küche mit Essplatz</span><span class="en">plus eat-in kitchen</span></small></dd></div>
+      <div class="fact"><dt><span class="de">Zimmer</span><span class="en">Rooms</span></dt><dd>4<small><span class="de">3 Betten, plus Küche mit Essplatz</span><span class="en">3 beds, plus eat-in kitchen</span></small></dd></div>
       <div class="fact"><dt><span class="de">Badezimmer</span><span class="en">Bathrooms</span></dt><dd>1<small><span class="de">Wanne und Dusche</span><span class="en">bath and shower</span></small></dd></div>
       <div class="fact"><dt><span class="de">Terrasse</span><span class="en">Terrace</span></dt><dd>17,80 m²<small><span class="de">Südwest, plus Garten</span><span class="en">south-west, plus garden</span></small></dd></div>
       <div class="fact"><dt><span class="de">Baujahr</span><span class="en">Built</span></dt><dd>1911<small><span class="de">saniert 2020/21</span><span class="en">renovated 2020/21</span></small></dd></div>
@@ -372,6 +383,73 @@ footer .fgrid{display:grid; gap:22px}
         <li><b><span class="de">Möblierung</span><span class="en">Furnishing</span></b><span><span class="de">Vollständig und hochwertig, Zuschlag separat</span><span class="en">Complete, high quality, surcharge separate</span></span></li>
         <li><b><span class="de">Lage im Haus</span><span class="en">Position</span></b><span><span class="de">1. Obergeschoss, kein Aufzug</span><span class="en">First floor, no lift</span></span></li>
       </ul>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section id="moeblierung">
+  <div class="wrap">
+    <p class="eyebrow"><span class="de">Möblierung</span><span class="en">Furnishing</span></p>
+    <h2 style="margin-bottom:10px"><span class="de">Was genau drin ist</span><span class="en">What is actually in it</span></h2>
+    <p style="margin-bottom:26px">
+      <span class="de">Alles ist vorhanden, nichts ist Zwischenlösung. Sie brauchen für den Aufenthalt nichts anzuschaffen.</span>
+      <span class="en">Everything is there and nothing is makeshift. You will not need to buy a thing for your stay.</span>
+    </p>
+    <div class="furn">
+      <section>
+        <h3><span class="de">Wohnen und Essen</span><span class="en">Living and dining</span></h3>
+        <ul>
+          <li><span class="de">Zwei Sofas</span><span class="en">Two sofas</span></li>
+          <li><span class="de">Esstisch mit sechs Stühlen</span><span class="en">Dining table with six chairs</span></li>
+          <li><span class="de">Sideboard und Kommode</span><span class="en">Sideboard and chest of drawers</span></li>
+          <li><span class="de">Bogenleuchte und Deckenleuchten</span><span class="en">Arc lamp and ceiling lights</span></li>
+        </ul>
+      </section>
+      <section>
+        <h3><span class="de">Küche</span><span class="en">Kitchen</span></h3>
+        <ul>
+          <li><span class="de">Eigener Esstisch mit Stühlen</span><span class="en">Separate dining table with chairs</span></li>
+          <li><span class="de">Einbauküche Schüller mit Granitarbeitsplatte</span><span class="en">Schüller fitted kitchen, granite worktop</span></li>
+          <li><span class="de">Siemens: Backofen, Dampfgarer, Kaffeevollautomat, Induktionskochfeld</span><span class="en">Siemens: oven, steam oven, coffee machine, induction hob</span></li>
+          <li><span class="de">Großer Kühl- und Gefrierschrank, Spülmaschine</span><span class="en">Large fridge freezer, dishwasher</span></li>
+          <li><span class="de">Geschirr, Gläser, Töpfe und Besteck</span><span class="en">Crockery, glassware, pots and cutlery</span></li>
+        </ul>
+      </section>
+      <section>
+        <h3><span class="de">Schlafen</span><span class="en">Sleeping</span></h3>
+        <ul>
+          <li><span class="de">Drei Betten, davon zwei Boxspringbetten</span><span class="en">Three beds, two of them boxspring</span></li>
+          <li><span class="de">Große Kleiderschränke in jedem Schlafzimmer</span><span class="en">Large wardrobes in every bedroom</span></li>
+          <li><span class="de">Nachttische und Leuchten</span><span class="en">Bedside tables and lamps</span></li>
+          <li><span class="de">Bettwäsche und Handtücher</span><span class="en">Bed linen and towels</span></li>
+        </ul>
+      </section>
+      <section>
+        <h3><span class="de">Arbeiten</span><span class="en">Working</span></h3>
+        <ul>
+          <li><span class="de">Zwei Schreibtische mit Stühlen</span><span class="en">Two desks with chairs</span></li>
+          <li><span class="de">Sessel und Leseleuchten</span><span class="en">Armchairs and reading lamps</span></li>
+          <li><span class="de">Internetanschluss</span><span class="en">Internet connection</span></li>
+        </ul>
+      </section>
+      <section>
+        <h3><span class="de">Bad und Hauswirtschaft</span><span class="en">Bathroom and utility</span></h3>
+        <ul>
+          <li><span class="de">Waschmaschine von Miele</span><span class="en">Miele washing machine</span></li>
+          <li><span class="de">Trockner von Siemens</span><span class="en">Siemens dryer</span></li>
+          <li><span class="de">Spiegelschrank, Wanne und Dusche</span><span class="en">Mirror cabinet, bath and shower</span></li>
+        </ul>
+      </section>
+      <section>
+        <h3><span class="de">Draußen</span><span class="en">Outside</span></h3>
+        <ul>
+          <li><span class="de">Loungemöbel auf der Terrasse</span><span class="en">Lounge furniture on the terrace</span></li>
+          <li><span class="de">Sonnenschirm</span><span class="en">Parasol</span></li>
+          <li><span class="de">Gartenmöbel mit Esstisch und Liege</span><span class="en">Garden furniture with dining table and lounger</span></li>
+        </ul>
+      </section>
     </div>
   </div>
 </section>
